@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="slide-out" class="sidenav">
+                <li>
+                    <a class="sidenav-close" href="#!">
+                        Conteúdo N1
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-close" href="#!">
+                        Conteúdo N2
+                    </a>
+                </li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        </nav>
+    </header>
+    <div class="content">
+        <h3>Bem-vindo ao conteúdo de Complexidade de Algoritmos!</h3>
+        <P>
+            Nesta jornada desafiadora, mergulharemos no fascinante mundo da análise de algoritmos, 
+            explorando a complexidade e eficiência que permeiam o âmbito computacional. 
+            Prepare-se para uma exploração profunda, que o levará das noções básicas à compreensão avançada da otimização algorítmica.
+        </P>
+        <h5>O Que Esperar</h5>
+        <ol>
+            <li>
+                <strong>Entender os Fundamentos:</strong> Vamos começar do início, abordando os conceitos fundamentais da complexidade algorítmica. 
+                Aprenderemos sobre notações, tempo de execução, espaço e como medir a eficiência de algoritmos.
+            </li>
+            <li>
+                <strong>Análise de Algoritmos:</strong> Aprofundaremos a análise de algoritmos, 
+                explorando diferentes técnicas para avaliar o desempenho dos algoritmos, como a complexidade de tempo e espaço.
+            </li>
+            <li>
+                <strong>Estudo de Casos:</strong> Examinaremos casos práticos, 
+                analisando algoritmos reais e discutindo estratégias para otimizar o código e melhorar a eficiência.
+            </li>
+            <li>
+                <strong>Desafios e Prática:</strong> Você terá a chance de aplicar o que aprendeu por meio de desafios práticos e 
+                exercícios que aprimorarão sua habilidade de avaliar e otimizar algoritmos.
+            </li>
+            <li>
+                <strong>Avanço Gradual:</strong> Nossa atividade é estruturada para atender a todos os níveis de conhecimento, 
+                desde iniciantes até especialistas. Portanto, você pode progredir no seu próprio ritmo. 
+            </li>
+        </ol>
+    </div>
+</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {});
+        });
+
+        var collapsibleElem = document.querySelector('.collapsible');
+        var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+    </script>
+</html>

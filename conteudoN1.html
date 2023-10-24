@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="slide-out" class="sidenav">
+                <li>
+                    <a class="sidenav-close" href="#!">
+                        Conteúdo N1
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-close" href="#!">
+                        Conteúdo N2
+                    </a>
+                </li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        </nav>
+    </header>
+    <section>
+        <h4 class="center-align">Conteúdo N1</h4>
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="./assets/img/background-image.jpg" width="100" height="100">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Análise Assíntotica<i class="material-icons right">more_vert</i></span>
+              <p><a href="#">Continuar lendo</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Análise Assíntotica<i class="material-icons right">close</i></span>
+              <p>A análise assintótica é um conceito fundamental na teoria da complexidade de algoritmos e desempenha 
+                um papel crucial na avaliação do comportamento de algoritmos à medida que o tamanho dos dados de 
+                entrada cresce. Ela nos permite entender como a eficiência de um algoritmo se comporta quando lidamos 
+                com problemas de tamanho cada vez maior, sem se ater a detalhes específicos.</p>
+            </div>
+          </div>
+    </section>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {});
+    });
+    var instance = M.Carousel.init({
+    fullWidth: true,
+    indicators: true
+  });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+    });
+
+    var collapsibleElem = document.querySelector('.collapsible');
+    var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+</script>
+</html>

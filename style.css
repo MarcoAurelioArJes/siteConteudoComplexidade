@@ -1,0 +1,25 @@
+body {
+    color: #000;
+}
+
+.content {
+    /* background: url(./assets/img/background-image.jpg); */
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+.content::after {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .8;
+    z-index: -1;
+}
