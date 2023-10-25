@@ -32,26 +32,25 @@
             <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
         </nav>
     </header>
-    <section class="container">
-        <h3>Bem-vindo ao conteúdo de Complexidade de Algoritmos!</h3>
-        <div>
-            <p>
-                Nesta jornada desafiadora, mergulharemos no fascinante mundo da análise de algoritmos, 
-                explorando a complexidade e eficiência que permeiam o âmbito computacional. 
-                Prepare-se para uma exploração profunda, que o levará das noções básicas à compreensão avançada da otimização algorítmica.
-            </p>
-            <h5>O Que Esperar</h5>
-            <ol class="left-align">
-                <li>
-                    <strong>Entender os Fundamentos:</strong> Vamos começar do início, abordando os conceitos fundamentais da complexidade algorítmica. 
-                    Aprenderemos sobre notações, tempo de execução, espaço e como medir a eficiência de algoritmos.
-                </li>
-                <li>
-                    <strong>Análise de Algoritmos:</strong> Aprofundaremos a análise de algoritmos, 
-                    explorando diferentes técnicas para avaliar o desempenho dos algoritmos, como a complexidade de tempo e espaço.
-                </li>
-            </ol>
-        </div>
+    <section>
+        <div class="carousel carousel-slider center">
+            <div class="carousel-item red white-text" href="#one!">
+              <h2>First Panel</h2>
+              <p class="white-text">This is your first panel</p>
+            </div>
+            <div class="carousel-item amber white-text" href="#two!">
+              <h2>Second Panel</h2>
+              <p class="white-text">This is your second panel</p>
+            </div>
+            <div class="carousel-item green white-text" href="#three!">
+              <h2>Third Panel</h2>
+              <p class="white-text">This is your third panel</p>
+            </div>
+            <div class="carousel-item blue white-text" href="#four!">
+              <h2>Fourth Panel</h2>
+              <p class="white-text">This is your fourth panel</p>
+            </div>
+          </div>
     </section>
     <footer class="page-footer center-align">
         <div class="container">
@@ -79,13 +78,23 @@
         </div>
     </footer>
 </body>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems, {});
-        });
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {});
+    });
+    
+    var instance = M.Carousel.init({
+        fullWidth: true,
+        indicators: true
+    });
 
-        var collapsibleElem = document.querySelector('.collapsible');
-        var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
-    </script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+    });
+
+    var collapsibleElem = document.querySelector('.collapsible');
+    var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+</script>
 </html>

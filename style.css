@@ -1,9 +1,9 @@
-body {
+/* body {
     color: #000;
 }
 
 .content {
-    /* background: url(./assets/img/background-image.jpg); */
+    background: url(./assets/img/background-image.jpg);
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -22,4 +22,10 @@ body {
     top: 0;
     opacity: .8;
     z-index: -1;
+} */
+
+.page-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
