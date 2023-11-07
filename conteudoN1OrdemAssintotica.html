@@ -24,7 +24,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="sidenav-close" href="#!">
+                    <a class="sidenav-close" href="conteudoN2.html">
                         Conteúdo N2
                     </a>
                 </li>
@@ -32,24 +32,43 @@
             <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
         </nav>
     </header>
-    <section>
-        <div class="carousel carousel-slider center">
-            <div class="carousel-item red white-text" href="#one!">
-              <h2>First Panel</h2>
-              <p class="white-text">This is your first panel</p>
-            </div>
-            <div class="carousel-item amber white-text" href="#two!">
-              <h2>Second Panel</h2>
-              <p class="white-text">This is your second panel</p>
-            </div>
-            <div class="carousel-item green white-text" href="#three!">
-              <h2>Third Panel</h2>
-              <p class="white-text">This is your third panel</p>
-            </div>
-            <div class="carousel-item blue white-text" href="#four!">
-              <h2>Fourth Panel</h2>
-              <p class="white-text">This is your fourth panel</p>
-            </div>
+    <section class="conteudo containerDeSlides">
+          <div class="setas esquerda" onclick="esquerda();">
+            <img src="assets/img/seta-esquerda.png" width="50" height="50" alt="">
+          </div>
+          <div class="containerConteudo">
+            <ul class="listaDeItens" style="list-style: none;">
+                <li class="itemLista">
+                  <div class="carousel-item black-text">
+                    <h2>O que é a Ordem Assintótica ?</h2>
+                    <p class="black-text">                
+                          Em ciência da computação, ordem Assintótica é uma maneira de comparar o crescimento de duas ou mais funções matemáticas. Ela é baseada na ideia de que, para valores suficientemente grandes de n, a diferença entre as funções é insignificante.
+      
+                          Em termos simples, a ordem assíntotica de uma função f(n) é o comportamento de f(n) quando n tende ao infinito.
+      
+                          Por exemplo, a função f(n) = n^2 cresce mais rápido que a função g(n) = n na medida em que n aumenta. Isso porque, para valores suficientemente grandes de n, f(n) será muito maior que g(n).
+                    </p>
+                  </div>
+                </li>
+                <li class="esconde">
+                    bsdasd
+                </li>
+                <li class="esconde">
+                    csdasd
+                </li>
+                <li class="esconde">
+                    dsdasd
+                </li>
+                <li class="esconde">
+                    fsdasd
+                </li>
+                <li class="esconde">
+                    gsdasd
+                </li>
+            </ul>
+          </div>
+          <div class="setas direita" onclick="direita();">
+              <img src="assets/img/seta-direita.png" width="50" height="50" alt="">
           </div>
     </section>
     <footer class="page-footer center-align">
@@ -78,6 +97,7 @@
         </div>
     </footer>
 </body>
+<script text="text/javascript" src="slide.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.carousel');
