@@ -40,8 +40,12 @@
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 1.5rem;
+    padding: 0 4rem;
     box-sizing: border-box;
+}
+
+.black-text{
+    font-size: 1.2rem;
 }
 
 .esconde {
@@ -100,4 +104,23 @@
     100% {
         transform: translateX(-180px);
     }
+}
+
+/* N2 Dividir para conquistar */
+
+.div-conteudo-texto-dividirConquistar
+{
+    width: 50rem; 
+    margin-right: 5rem; 
+}
+
+#ul-passos-dividirConquistar
+{
+    display: grid; 
+    align-items: center;
+}
+
+strong
+{
+    font-weight: 700;
 }
