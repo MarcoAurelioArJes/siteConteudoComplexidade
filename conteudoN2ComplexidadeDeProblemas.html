@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Complexidade de Algoritmos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="slide-out" class="sidenav">
+                <li>
+                    <a class="sidenav-close" href="index.html">
+                        Ínicio
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-close" href="conteudoN1.html">
+                        Conteúdo N1
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-close" href="conteudoN2.html">
+                        Conteúdo N2
+                    </a>
+                </li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        </nav>
+    </header>
+    <section class="conteudo containerDeSlides">
+          <div class="setas esquerda" onclick="esquerda();">
+            <img src="assets/img/seta-esquerda.png" width="50" height="50" alt="">
+          </div>
+          <div class="containerConteudo">
+            <ul class="listaDeItens" style="list-style: none;">
+                <li class="itemLista">
+                  <div class="carousel-item black-text">
+                    <h2>Complexidade de Problemas</h2>
+                    <p class="black-text">                
+                        A complexidade de problemas aborda a dificuldade computacional em resolver categorias específicas de problemas. Avaliamos o tempo e recursos necessários para encontrar soluções eficientes.
+                    </p>
+                  </div>
+                </li>
+                <li class="esconde">
+                    <h2>Definições Importantes</h2>
+                    <p class="black-text">                
+                        Problemas de complexidade é a dificuldade de um algoritmo Problemas de complexidade são classificadas em P, NP e NP-completos.
+                    </p>
+                    <p class="black-text">                
+                        <strong>Tempo polinomial:</strong> refere-se ao desempenho de um algoritmo em relação ao tamanho da entrada.
+                        Um algoritmo é considerado de tempo polinomial se o tempo de execução for limitado por um polinômio do tamanho da entrada.
+                    </p>
+                    <p class="black-text">                
+                        <strong>P (Polinomial):</strong> Eficientemente resolvido em tempo polinomial.
+                    </p>
+                    <p class="black-text">                
+                        <strong>NP (Não-Determinístico Polinomial):</strong> Soluções verificáveis em tempo polinomial, mas resolvê-los pode ser difícil.
+                    </p>
+                    <p class="black-text">                
+                        <strong>NP-Completo:</strong> Os mais difíceis em NP; se resolvido eficientemente, todos os NP podem ser resolvidos.
+                    </p>
+
+                </li>
+                <li class="esconde">
+                    <h2>Explicação</h2>
+                    <p class="black-text">                
+                        <strong>Problemas P</strong> (Polinomial) são aqueles para os quais existe um algoritmo eficiente capaz de resolver o problema em tempo polinomial
+                        em relação ao tamanho da entrada. Em termos simples, o tempo de execução do algoritmo é limitado por uma função polinomial.
+                        </p>                    
+                    <p class="black-text"> 
+                        <strong>Problemas NP</strong> (Não-Determinístico Polinomial) são aqueles para os quais, se uma solução candidata é fornecida,
+                        é possível verificar em tempo polinomial se ela é correta. No entanto, encontrar essa solução inicial pode não ser eficiente.
+                    </p>                    
+                    <p class="black-text"> 
+                        <strong>Problemas NP-Completo</strong> são uma classe especial de problemas NP. Se um problema NP-Completo tiver uma solução eficiente (tempo polinomial),
+                        então todos os problemas em NP também têm soluções eficientes. Em outras palavras, os problemas NP-Completo são, de certa forma, os mais difíceis dentro da classe NP.
+                        Se um problema NP-Completo puder ser resolvido em tempo polinomial, então todos os problemas NP podem. O exemplo clássico de um problema NP-Completo é o problema do caixeiro-viajante.
+                    </p>
+                </li>
+                <li class="esconde">
+                    <h2>Problema P</h2>
+                    <p class="blac-text">
+                        Um exemplo clássico de problema P é a ordenação de uma lista de elementos. Algoritmos eficientes, como o Quicksort ou Mergesort, podem ordenar uma lista em tempo polinomial.
+                    </p>
+                </li>
+                <li class="esconde">
+                    <h2>Problema NP</h2>
+                    <p class="blac-text">
+                        Um exemplo de problema NP é a fatoração de números. Dado um número grande, encontrar seus fatores primos pode ser complexo, mas verificar se uma dada fatoração é correta é fácil e pode ser feito em tempo polinomial.
+                    </p>
+                </li>
+                <li class="esconde">
+                    <h2>Problema NP-Completo</h2>
+                    <p class="blac-text">
+                        O problema do Caixeiro-Viajante é um exemplo clássico de NP-completo. Dada uma lista de cidades e as distâncias entre elas, encontrar o caminho mais curto que visita cada cidade uma vez e retorna à cidade de origem é NP-completo. O desafio é encontrar uma solução em tempo polinomial.
+                    </p>
+                </li>
+            </ul>
+          </div>
+          <div class="setas direita" onclick="direita();">
+              <img src="assets/img/seta-direita.png" width="50" height="50" alt="">
+          </div>
+    </section>
+    <footer class="page-footer center-align">
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <h5 class="white-text">Participantes</h5>
+              <ul>
+                <li>
+                    <a class="grey-text text-lighten-3" href="#!">Marco Aurélio</a>
+                </li>
+                <li>
+                    <a class="grey-text text-lighten-3" href="#!">Vitor Marques</a>
+                </li>
+                <li>
+                    <a class="grey-text text-lighten-3" href="#!">Daniel Fontele</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+            © 2023 Copyright
+          </div>
+        </div>
+    </footer>
+</body>
+<script text="text/javascript" src="slide.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {});
+    });
+    
+    var instance = M.Carousel.init({
+        fullWidth: true,
+        indicators: true
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+    });
+
+    var collapsibleElem = document.querySelector('.collapsible');
+    var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+</script>
+</html>
