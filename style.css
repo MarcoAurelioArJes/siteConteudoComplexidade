@@ -46,7 +46,7 @@ header
     display: flex;
     align-items: center;
     min-height: 100%;
-    opacity: 0;
+    opacity: 0.1;
     transition: .5s;
     cursor: pointer;
 }
