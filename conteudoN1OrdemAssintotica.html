@@ -45,18 +45,38 @@
                       <div class="carousel-item black-text">
                         <div class="div-paginas">
                             <div class="div-paginas-titulo">
-                                <h2>O que é a Ordem Assintótica?</h2>
+                                <h2>Ordem Assintótica</h2>
                             </div>
                             <div class="div-paginas-conteudo">
                                 <div class="div-paginas-conteudo-texto">
                                     <p class="black-text">
-                                        O algoritimo guloso, do inglês "Greedy algorithm" (algoritmo ganancioso), se trata de uma estratégia de
-                                        implementação para algoritimos que visa oferecer uma solução simples para problemas de otimização. Sua 
-                                        execução propõe uma resposta fácil, onde dentre as alternativas oferecidas, o algoritimo irá selecionar 
-                                        a opção que julgar mais vantajosa no momento da escolha, isso sem considerar para o que a alternativa 
-                                        possa levar no longo prazo, por conta dessa caracteristica esse modelo é muitas vezes também chamado de
-                                        miope.
+                                        À medida em que o argumento de uma função cresce ou diminui infinitamente, isto é,
+                                        fica muito grande ou muito pequeno, realizamos uma análise assintótica da função para
+                                        determinar sua complexidade por meio de uma representação generalista que segue três notações
+                                        principais: <b>O(f(x)) Ω(f(x)) Θ(f(x))</b>
                                     </p>
+                                    <h4>Notações assintóticas</h4>
+                                    <ul>
+                                        <li>
+                                            <h5>O(f(n)) -> Notação Big O</h5>
+                                            <p class="black-text">
+                                                Essa notação define um limite superior assintótico para a função.
+                                                Nessa notação ignoramos as constantes.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h5>Ω(f(n)) -> Notação Omêga</h5>
+                                            <p class="black-text">
+                                                Essa notação define um limite inferior assintótico para a função.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h5>Θ(f(n)) -> Notação Teta</h5>
+                                            <p class="black-text">
+                                                Define um limite exato da função analisada.
+                                            </p>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -66,34 +86,30 @@
                     <li class="esconde">
                         <div class="div-paginas">
                             <div class="div-paginas-titulo">
-                                <h2>Explicando o modelo</h2>
+                                <h2>Notação Big O</h2>
                                 <p class="black-text" style="margin-bottom: 0;">                
-                                    Aprofundando um pouco mais na execução desse algoritimo, será possível encontrar uma série de 
-                                    caracteristicas que ditam o seu funcionamento.<br>
+                                    A notação Big O é uma forma de medir a complexidade de um algoritmo, ou seja, como seu tempo de execução cresce em relação ao tamanho da entrada. Ela é baseada na ideia de que, para grandes valores de n, o termo dominante da complexidade do algoritmo é o que cresce mais rápido.
                                 </p>
                             </div>
                             <div class="div-paginas-conteudo">
                                 <div class="div-paginas-conteudo-texto">
+                                    <h4>Exemplo</h4>
                                     <p class="black-text">
-                                           Para dar inicio, como mencionado anteriormente, na sua execução essa técnica irá focar em encontrar 
-                                           o que pareça se tratar de um solução ótima para o problema, ao menos no momento da busca. Para isso,
-                                           são feitas comparações entre as opções possíveis, com base em um parâmetro que é passado para o
-                                           algoritimo anteriormente. Neste processo de seleção, são ignorados os resultados futuros que cada 
-                                           alterntiva possa acarretar, em razão disto, muitas vezes resultando em escolhas que nem ao menos gerem 
-                                           uma solução para o problema proposto. Porém, jamais volta atrás em uma escolha feita.
+                                        Podemos calcular o Big O procurando o termo dominante que cresce mais rápido à medida que o valor de 'n' aumenta.
+                                        Na função f(n) = 3n + 2n²:
+                                    <p>
+                                    <p class="black-text">
+                                        1. O termo dominante é 2n², já que, à medida que 'n' cresce, 
+                                        o termo quadrático se torna significativamente maior do que o termo linear.
                                     </p>
                                     <p class="black-text">
-                                            O algoritimo guloso é simples e possui uma fácil implementação, porém nem sempre gera a melhor solução
-                                            possível, dependendo da quantidade de informações disponíveis para ser capaz de produzir uma boa resposta.
+                                        2. O fator constante (o coeficiente '2' neste caso) não afeta o crescimento assintótico 
+                                        à medida que 'n' se torna muito grande, então nos concentramos no termo n².
                                     </p>
                                     <p class="black-text">
-                                           Para exemplificar essa dinâmica, supodondo um algoritimo deva obter a maior soma com base nos números dispostos,
-                                           assim como é ilustrado na imagem, o algoritimo guloso irá selecionar o maior número de cada iteração, porém esse 
-                                           procedimento não o levará para a melhor solução possível. 
+                                        Portanto, o Big O de f(n) é O(n²). Isso significa que a função f(n) cresce assintoticamente 
+                                        no máximo na ordem de n^2 à medida que 'n' se aproxima do infinito. 
                                     </p>
-                                </div>
-                                <div class="div-paginas-conteudo-img">
-                                    <img src="assets/img/algoritimoGuloso_img01.gif" width="100%" height="100%" alt="">
                                 </div>
                             </div>
                         </div>
@@ -102,38 +118,79 @@
                     <li class="esconde">
                         <div class="div-paginas">
                             <div class="div-paginas-titulo">
-                                <h2>Exemplo</h2>
+                                <h2>Notação Omêga</h2>
                                 <p class="black-text">                
-                                    Para trazer uma demonstração prática da técnica, temos o <strong>Algoritmo de Dijkstra</strong>, 
-                                    um algoritmo de caminho mínimo usado em grafos. Este algoritimo visa calcular o caminho mais curto 
-                                    entre um vértice inicial e um ou todos os outros vértices de um grafo, isso seguindo por arestas com 
-                                    pesos definidos.
+                                    A notação Omêga, também conhecida como notação Ω, é uma forma de descrever a complexidade assintótica inferior de um algoritmo. 
+                                    Ela é usada para indicar que o tempo de execução de um algoritmo cresce, no mínimo, na ordem de uma determinada função, 
+                                    para entradas suficientemente grandes.
                                 </p>
                             </div>
                             <div class="div-paginas-conteudo">
                                 <div class="div-paginas-conteudo-texto">
-                                    <p class="black-text">       
-                                        Para realizar esse cálculo, a cada iteração o algoritimo irá tentar fazer o menor movimento
-                                        com as possibilidades oferecidas no momento, sem voltar atrás em uma decisão que já tenha feito.
-                                        Confiando que resulte na melhor solução possível.
+                                    <h4>Exemplo</h4>
+                                    <p class="black-text">
+                                        Para calcular o Ômega da função f(n) = 3n + 2n + 3, precisamos encontrar uma função que seja um limite inferior assintótico para f(n).
+                                    <p>
+                                    <p class="black-text">
+                                        Primeiro, simplificamos a função f(n):<br>
+                                        f(n) = 3n + 2n + 3<br>
+                                        f(n) = 5n + 3<br>
+                                    <p>
+                                    <p class="black-text">
+                                        Agora, queremos encontrar uma função g(n) tal que f(n) ≥ c . g(n) para algum c > 0 e n ≥ n0, onde c e n0 são constantes.
                                     </p>
-                                    <p class="black-text">       
-                                        Dessa forma, seguindo o grafo representado na imagem, supondo uma partida do vértice <strong>A</strong> 
-                                        com destino ao vértice <strong>E</strong>. Inicialmente o algoritimo irá julgar o caminho para o vértice 
-                                        <strong>B</strong> o mais vantajoso, por levar apenas 2 minutos para se locomover, então se movimentando 
-                                        para lá. Em seguida, se baseando no mesmo cirtério, o algoritimo escolherá o vértice <strong>D</strong> 
-                                        como o próximo destino. E entao, por fim seguirá para o vértice <strong>E</strong>, atingindo seu objetivo. 
+                                    <p class="black-text">
+                                        Vamos escolher g(n) = n, e vamos encontrar um c adequado.<br>
+                                        f(n) = 5n + 3<br>
+                                        5n + 3 ≥ c . n<br>
                                     </p>
-                                    <p class="black-text">       
-                                        Resultando na rota <strong>A -> B -> D -> E</strong> com um custo de 5 minutos. Neste caso, obtendo êxcito em 
-                                        encontrar a menor rota possível.
+                                    <p class="black-text">
+                                        Para simplificar, podemos escolher c = 4 e n0 = 1:<br>
+                                        5n + 3 ≥ 4n para n ≥ 1
                                     </p>
-                                </div>
-                                <div class="div-paginas-conteudo-img">
-                                    <img src="assets/img/algoritimoGuloso_img02.png" width="100%" height="100%" alt="">
+                                    <p class="black-text">
+                                        Portanto, para c = 4 e n0 = 1, temos f(n) ≥ 4n para n ≥ 1.
+                                    </p>
+                                    <p class="black-text">
+                                        Isso significa que f(n) é limitado inferiormente por g(n) = n multiplicado por uma constante c = 4 para n ≥ 1.
+                                    </p>
+                                    <p class="black-text">
+                                        Portanto, podemos concluir que f(n) = Ω(n).
+                                    </p>
                                 </div>
                             </div>
-                        </div>
+                    </li>
+
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Notação Teta</h2>
+                                <p class="black-text">                
+                                    Em ciência da computação, a notação teta (Θ) é um tipo de notação assintótica que descreve a complexidade de execução de um algoritmo. 
+                                    Ela é usada para representar um limite superior e inferior exato para o tempo de execução de um algoritmo, para todos os valores suficientemente grandes de n.
+                                </p>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <h4>Exemplo</h4>
+                                    <p class="black-text">
+                                        Vamos calcular o Teta da função f(n) = 7n + 2n + 4.
+                                    <p>
+                                    <p class="black-text">
+                                        Primeiro vamos simplificar:<br>
+                                        f(n) = 9n + 4
+                                    <p>
+                                    <p class="black-text">
+                                        Ao analisar essa função, o termo dominante que determina seu crescimento é 9n, já que, à medida que n aumenta, esse termo se torna muito maior em comparação com o termo constante 4.
+                                    <p>
+                                    <p class="black-text">
+                                        Portanto, a função f(n) cresce de forma linear, e seu comportamento assintótico é representado por Θ(n).
+                                    <p>
+                                    <p class="black-text">
+                                        Em resumo, Θ da função f(n) = 7n + 2n + 4 é Θ(n).
+                                    <p>
+                                </div>
+                            </div>
                     </li>
                 </ul>
             </div>
